@@ -328,7 +328,7 @@ class InterfaceEcoSort(ctk.CTk):
         self._atualizar_grafico_tempo(saida["tempo_mensal"])
         self._atualizar_grafico_comparativo(saida["resultados"])
         self._atualizar_visibilidade_detalhado()
-
+        #https://open.spotify.com/album/0dHf3EzHyFV4s1JhOyCjGp?si=Dw9xt2rwSHOO_xITRg1i9Q
         if not getattr(self, "_bigo_calculado", False):
             self._bigo_calculado = True
             self._calcular_bigo_em_segundo_plano()               
@@ -367,7 +367,7 @@ class InterfaceEcoSort(ctk.CTk):
         ).pack(anchor="w", padx=10, pady=(0, 4))
         self.label_melhor = ctk.CTkLabel(painel_melhor, text="—", justify="left", anchor="w")
         self.label_melhor.pack(anchor="w", padx=10, pady=(0, 10), fill="x")
-        #
+        #https://open.spotify.com/album/5MqyhhHbT13zsloD3uHhlQ?si=_XiTtfB7QVSB0aZHWHPIlQ
         painel_pior = ctk.CTkFrame(self.frame_diagnostico, corner_radius=8, fg_color="#FFEBEE")
         painel_pior.grid(row=0, column=1, sticky="nsew", padx=(5, 10), pady=10)
         ctk.CTkLabel(
@@ -445,7 +445,7 @@ class InterfaceEcoSort(ctk.CTk):
 
         self.fig_estado.suptitle("Regiões Afetadas (km²)", fontsize=10, fontweight="bold")
         self.canvas_estado.draw()
-
+        #https://open.spotify.com/intl-pt/album/5rFRfDq52l2l5RtS5kxA9A?si=RfohrjFgQuaY6xDXnZSMrQ
     def _atualizar_grafico_classe(self, classe):
         self.ax_classe.clear()
         valores = list(classe.values())
@@ -496,7 +496,7 @@ class InterfaceEcoSort(ctk.CTk):
             self.frame_bigo,
             self.frame_comparativo,
         ]
-
+        #https://open.spotify.com/intl-pt/album/4kA2o0L3tz9vFKJetiFUJI?si=-oR7VcFQRHqbhQE3R9A4Jg
         for frame in frames_detalhados:
             frame.pack_forget()
         self.frame_resumo_oficial.pack_forget()
@@ -512,7 +512,7 @@ class InterfaceEcoSort(ctk.CTk):
         self.texto_relatorio.delete("1.0", "end")
         self.texto_relatorio.insert("1.0", texto)
         self.texto_relatorio.configure(state="disabled")
-
+    #https://open.spotify.com/intl-pt/album/6k9SSFRu6Lw2RWp1WXmGaN?si=uUF0NtaVR1qgctL19_ddxg
     def _atualizar_diagnostico(self, diag_inverso, diag_aleatorio):
         self.label_melhor.configure(
             text=(
@@ -538,7 +538,7 @@ class InterfaceEcoSort(ctk.CTk):
                 f"Classe: {diag_aleatorio['pior_complexidade']}"
             )
         )
-
+    #https://open.spotify.com/intl-pt/album/3OmnatFgQ8o1DlYLp9EpNJ?si=bS8tamPVQL-oWyMiQl19Yg
     def _calcular_bigo_em_segundo_plano(self):
         def trabalho():
             dados_crescimento = medir_crescimento()
@@ -587,7 +587,7 @@ class InterfaceEcoSort(ctk.CTk):
         self.fig_bigo.tight_layout()
         self.canvas_bigo.draw()
         self.update_idletasks()
-
+        #https://open.spotify.com/intl-pt/album/4VmdHqsa6hhQW7EEKlmFly?si=IWGQqAK3T1aEKs02DOCSAQ
         texto_final = "\n\n".join(diagnostico_bigo[nome]["texto"] for nome in dados_crescimento)
         self.texto_bigo.configure(state="normal")
         self.texto_bigo.delete("1.0", "end")
@@ -646,7 +646,7 @@ class InterfaceEcoSort(ctk.CTk):
             classe_predominante = _formatar_nome_categoria(classe_predominante)
         else:
             classe_predominante = "—"
-
+        #https://open.spotify.com/intl-pt/album/63KpMsxh6E1WJPcDeT2GH4?si=E0HBFF20Sw6meWjFgZtNjw
         area_fmt = f"{total_area:,.2f}".replace(",", "X").replace(".", ",").replace("X", ".")
         alertas_fmt = f"{total_alertas:,}".replace(",", ".")
 
