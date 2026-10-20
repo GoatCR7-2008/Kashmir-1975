@@ -125,7 +125,7 @@ class InterfaceEcoSort(ctk.CTk):
         self._montar_bloco_resumo_oficial()  
         self.after(100, self._carregar_e_executar)
         self.scroll_frame.bind_all("<MouseWheel>", self._forcar_redesenho, add="+")
-
+    #https://open.spotify.com/intl-pt/album/7I9Wh2IgvI3Nnr8Z1ZSWby?si=HsJDH7W4RAODWHiusJ88vA
     def _forcar_redesenho(self, event=None):
         self.scroll_frame._parent_canvas.update()
         self.update_idletasks()
@@ -226,7 +226,7 @@ class InterfaceEcoSort(ctk.CTk):
             font=ctk.CTkFont(size=11), text_color="#888888",
         )
         self.label_bigo_status.pack(anchor="w", padx=10, pady=(0, 6))
-
+        #https://open.spotify.com/intl-pt/album/309KOMEivisMmBuzk09635?si=d8hHfrQdSQazyHamuDZxpA
         self.fig_bigo = Figure(figsize=(10, 4), dpi=100)
         self.ax_bigo = self.fig_bigo.add_subplot(111)
         self.canvas_bigo = FigureCanvasTkAgg(self.fig_bigo, master=self.frame_bigo)
@@ -307,7 +307,7 @@ class InterfaceEcoSort(ctk.CTk):
             messagebox.showwarning("Aviso", str(erro))
             self.label_status.configure(text="⚠️ Não foi possível concluir a análise.")
             return
-
+        #https://open.spotify.com/intl-pt/album/7JLiApdEm6DhYEdK3cop0v?si=HnovRRvAT4KSOu016t5zIA
         self.label_status.configure(
             text=(
                 f"⏱️ Tempo TOTAL do processo (carregar dados + calcular tudo): {saida['tempo_total']:.3f}s\n"
@@ -390,12 +390,12 @@ class InterfaceEcoSort(ctk.CTk):
             text="📊 Comparação de Tempos Reais por Algoritmo (dados desta planilha)",
             font=ctk.CTkFont(size=14, weight="bold"),
         ).pack(anchor="w", padx=10, pady=(10, 4))
-
+        
         self.fig_comparativo = Figure(figsize=(10, 4), dpi=100)
         self.ax_comparativo = self.fig_comparativo.add_subplot(111)
         self.canvas_comparativo = FigureCanvasTkAgg(self.fig_comparativo, master=self.frame_comparativo)
         self.canvas_comparativo.get_tk_widget().pack(fill="both", expand=True, padx=10, pady=(0, 10))
-
+    #https://open.spotify.com/intl-pt/album/12n11cgnpjXKLeqrnIERoS?si=x279PZsWTPuh7JkGdGR8Dw
     def _montar_bloco_resumo_oficial(self):
         self.frame_resumo_oficial = ctk.CTkFrame(self.scroll_frame, corner_radius=10, fg_color="#E3F2FD")
 
